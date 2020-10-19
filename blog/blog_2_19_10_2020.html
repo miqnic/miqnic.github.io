@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Miqnic | Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="shortcut icon" href="/images/MN.ico" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="/index.html" class="image avatar"><img src="/images/MN-header.png" alt="" /></a>
+					<h1>
+						<strong>Hi, I am Miqaela Nicole, </strong>
+						<br>
+						A developer who works on backend-development and database management.
+					</h1>
+					<br>
+					<p>Currently interested in:<br>Data Analytics and Visualization</p>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+				<!-- Two -->
+					<section id="one">
+                        <a href="blog_index.html"  style="margin-bottom: 15rem;">Back to Posts</a>
+                        <header class="major">
+                            <h2>Running My First Program</h2>
+                        </header>
+                        <p>
+                            In order to refine the AddHealth dataset to my study’s needs, I have chosen Python to get all the columns and rows that I will be needing. The variables to be used are stated in the first blog post for this activity which you could see <a href="blog_1_17_10_2020.html">here</a>. To summarize, I will be using the questions that correspond to the <strong>respondents’ grades in their Language, Math, History, and Science subjects</strong> found in Section 5 of the dataset. I will also be using all of the questions found in Section 35 which talks about the <strong>respondent’s perception of support by other people</strong>.
+                            <br>
+                            
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-12"><span class="image fit"><img src="files/blog_2/get_needed_columns.png" alt="" /></span></div>
+                            </div>
+
+                            <br>
+                            Using the code above, I have gathered the <strong>column names</strong> of the variables that I would need and made a new data frame with only those columns.
+                            <br><br>
+
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-12"><span class="image fit"><img src="files/blog_2/get_needed_rows.png" alt="" /></span></div>
+                            </div>
+
+                            <br>
+                            Basically, I put all valid answers from the two sections and put them inside of an array for easier validation. I, then, proceeded to <strong>filter all the rows</strong> to get only the responses which have valid answers for all the questions needed for this study.  There are no missing data from the columns I have chosen however I have removed some rows. 
+                            <br><br>
+                            For the grades section, I have taken out those who have answered “Didn’t take this subject”, “Took the subject, but it wasn’t graded this way”, “Does not apply”, “Refused”, and “Don’t know” which have the values 5, 6, 96, 97, and 98 respectively. For Section 35 which is a likert scale, I removed rows with values such as “Does not apply”, “Refused”, and “Don’t know” which have the values, 6, 96, and 98 respectively.
+                            <br><br>
+                            This is to ensure that my data will only consist of rows having a grade as its value. 
+                            <br><br>
+
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-12"><span class="image fit"><img src="files/blog_2/get_counts_percentages.png" alt="" /></span></div>
+                            </div>
+
+                            <br>
+                            After that, I <strong>gathered the counts and percentages of all the answers from the questions</strong>. Seeing them all listed down makes it easier for it to be read and analyzed. I used the same method to get the counts and percentages for other questions. I also have attached three (3) frequency distributions I have gathered.
+                            <br><br>
+
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-7"><span class="image fit"><img src="files/blog_2/math_count_percentages.png" alt="" /></span></div>
+                            </div>
+
+                            <br>
+                            This is the data under the <strong>H1ED12</strong> column and it asks the respondent on what their <em>Math grade</em> is. The values are equivalent to the following:
+                            
+                            <ul style="margin-left: 30px;">
+                                <li>1 = A</li>
+                                <li>2 = B</li>
+                                <li>3 = C</li>
+                                <li>4 = D or below</li>
+                            </ul>
+
+                            From the results, we could see that most respondents had a B for their Math subject (32.39%) and only 15% got a D and below.
+                            <br><br>
+
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-7"><span class="image fit"><img src="files/blog_2/adult_supp_count_percentages.png" alt="" /></span></div>
+                            </div>
+
+                            <br>
+                            The <strong>H1PR1</strong> columns contains the answers to the question, <em>“How much do you feel that adults care about you?”</em> The values are equivalent to the following: 
+                            
+                            <ul style="margin-left: 30px;">
+                                <li>1 = Not at all</li>
+                                <li>2 = Very Little</li>
+                                <li>3 = Somewhat</li>
+                                <li>4 = Quite a bit</li>
+                                <li>5 = Very much</li>
+                            </ul>
+
+                            According to the data gathered, more than half of the respondents have felt that they are very much cared for by the adults around them (2732 respondents, 56.72%) and only 41 respondents felt no care at all (0.85%).
+                            <br><br>
+
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-7"><span class="image fit"><img src="files/blog_2/running_away_count_percentages.png" alt=""  /></span></div>
+                            </div>
+
+                            <br>
+                            The last frequency distribution that I have attached are for those respondents who have wanted to leave their homes. This is the data under the <strong>H1PR6</strong> column and it hast the same values as the H1PR1 column. This shows that 2112 respondents do not want to leave their homes (43.84%) while 261 respondents felt otherwise (5.42%)
+                            <br><br>
+                            If you are interested to see the whole code, I have attached it below.
+                            <br><br>
+
+                            <a href="files/blog_2/Week2_Submission.py" class="button fit small">Download my code</a>
+                        </p>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<a target="_blank" href="/BANGUILAN - Resume.pdf" class="button primary small" style="margin-bottom: 1rem;">View Resume</a>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/miqnic/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/miqnic" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.kaggle.com/swtptts" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
+						<li><a href="https://public.tableau.com/profile/miqnic#!/" class="icon solid fa-chart-area"><span class="label">Tableau</span></a></li>
+						<li><a href="mailto:emendibi@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
