@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Miqnic | Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="shortcut icon" href="/images/MN.ico" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="/index.html" class="image avatar"><img src="/images/MN-header.png" alt="" /></a>
+					<h1>
+						<strong>Hi, I am Miqaela Nicole, </strong>
+						<br>
+						A developer who works on backend-development and database management.
+					</h1>
+					<br>
+					<p>Currently interested in:<br>Data Analytics and Visualization</p>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+				<!-- Two -->
+					<section id="one">
+                        <a href="blog_index.html"  style="margin-bottom: 15rem;">Back to Posts</a>
+                        <header class="major">
+                            <h2>Making Data Management Decisions</h2>
+                        </header>
+                        <p>
+                            For this week, the course talks about how to manage your data in such a way that it will be meaningful to the target audience. The first part talks about setting aside irrelevant data and converting them to NaN instead. In my <a href="blog_2_19_10_2020.html">second blog post</a>, I have already removed or hid irrelevant data from my frequency tables. Conversion to NaN was done instead using the <em>replace</em> method. However as it can be seen from the results below, just doing the replace method makes my integer values into floats because NaN is a float type. 
+                            <br>
+
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-12"><span class="image fit"><img src="files/blog_3/float_freq_table_code.png" alt="" /></span></div>
+                            </div><br>
+                            
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-7"><span class="image fit"><img src="files/blog_3/float_freq_table.png" alt="" /></span></div>
+                            </div>
+
+                            <br>
+                            Converting it to an integer type using the <em>astype</em> method would not work on missing values as well and will return a Value error.
+                            <br><br>
+
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-12"><span class="image fit"><img src="files/blog_3/value_error_astype_code.png" alt="" /></span></div>
+                            </div><br>
+
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-12"><span class="image fit"><img src="files/blog_3/value_error_astype.png" alt="" /></span></div>
+                            </div>
+
+                            <br>
+                            In order to preserve my integer values and the NaN value, I converted it to an <strong>Int64Dtype</strong> which could hold integer dtypes and missing values.
+                            <br><br>
+
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-12"><span class="image fit"><img src="files/blog_3/correct_freq_table_code.png" alt="" /></span></div>
+                            </div><br>
+
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-7"><span class="image fit"><img src="files/blog_3/correct_freq_table.png" alt="" /></span></div>
+                            </div>
+
+                            <br>
+                            There are no skip patterns to be considered in the questions that I picked. The only thing that I will be having is a percentage to every count in the frequency table in order for it to be much more readable to the audience. 
+							<br><br>
+							
+							<div class="row gtr-50 gtr-uniform">
+                                <div class="col-12"><span class="image fit"><img src="files/blog_3/count_percents_code.png" alt="" /></span></div>
+                            </div><br>
+
+                            <div class="box alt">
+								<div class="row">
+									<div class="col-6"><span class="image fit"><img src="files/blog_3/H1PR1_sample.png" alt="" /></span></div>
+									<div class="col-6"><span class="image fit"><img src="files/blog_3/H1PR2_sample.png" alt="" /></span></div>
+									<div class="col-6"><span class="image fit"><img src="files/blog_3/H1PR3_sample.png" alt="" /></span></div>
+									<div class="col-6"><span class="image fit"><img src="files/blog_3//H1PR4_sample.png" alt="" /></span></div>
+								</div>
+							</div>
+
+                            If you are interested to see the whole code, I have attached it below.
+                            <br><br>
+
+                            <a href="files/blog_3/Week3_Submission.py" class="button fit small">Download my code</a>
+                        </p>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<a target="_blank" href="/BANGUILAN - Resume.pdf" class="button primary small" style="margin-bottom: 1rem;">View Resume</a>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/miqnic/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/miqnic" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.kaggle.com/swtptts" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
+						<li><a href="https://public.tableau.com/profile/miqnic#!/" class="icon solid fa-chart-area"><span class="label">Tableau</span></a></li>
+						<li><a href="mailto:emendibi@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
