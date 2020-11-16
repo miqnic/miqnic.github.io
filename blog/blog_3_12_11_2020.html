@@ -73,22 +73,39 @@
                             </div>
 
                             <br>
-                            There are no skip patterns to be considered in the questions that I picked. The only thing that I will be having is a percentage to every count in the frequency table in order for it to be much more readable to the audience. 
+                            Next, I added two secondary variables for support and grade values. For support variables, there are a total of eight (8) questions each having a likert scale from 1 to 5. This results to a total score of 40 for all questions. I added them all in a variable called SUPPORTSUM while dropping those with NA values.
 							<br><br>
 							
 							<div class="row gtr-50 gtr-uniform">
-                                <div class="col-12"><span class="image fit"><img src="files/blog_3/count_percents_code.png" alt="" /></span></div>
-                            </div><br>
-
-                            <div class="box alt">
-								<div class="row">
-									<div class="col-6"><span class="image fit"><img src="files/blog_3/H1PR1_sample.png" alt="" /></span></div>
-									<div class="col-6"><span class="image fit"><img src="files/blog_3/H1PR2_sample.png" alt="" /></span></div>
-									<div class="col-6"><span class="image fit"><img src="files/blog_3/H1PR3_sample.png" alt="" /></span></div>
-									<div class="col-6"><span class="image fit"><img src="files/blog_3//H1PR4_sample.png" alt="" /></span></div>
-								</div>
+                                <div class="col-12"><span class="image fit"><img src="files/blog_3/SUPPORTSUM_code.png" alt="" /></span></div>
 							</div>
 
+							<br>
+                            For the grade values, there are four (4) questions that I have considered which are the Math, English, Science, and History. I created a second variable called GRADEAVE that would have the mean average of those 4 grades. 
+							<br><br>
+
+							<div class="row gtr-50 gtr-uniform">
+                                <div class="col-12"><span class="image fit"><img src="files/blog_3/GRADEAVE_code.png" alt="" /></span></div>
+							</div>
+
+							<br>
+                            To have a more meaningful data, I applied ranges for both of these secondary variables. For the SUPPORTSUM, I have created five ranges though, in my case, only four is needed. These ranges have a size of 10. GRADEAVE has four needed ranges with a size of only 1. 
+							<br><br>
+
+							<div class="row gtr-50 gtr-uniform">
+                                <div class="col-12"><span class="image fit"><img src="files/blog_3/ranges_code.png" alt="" /></span></div>
+							</div>
+
+							<br>
+                            After that, I have printed the counts and percentages of SUPPORTSUM and GRADEAVE as seen below.
+							<br><br>
+
+							<div class="row gtr-50 gtr-uniform">
+								<div class="col-6"><span class="image fit"><img src="files/blog_3/SUPPORTSUM_counts_perc.png" alt="" /></span></div>
+								<div class="col-6"><span class="image fit"><img src="files/blog_3/SUPPORTSUM_counts_perc.png" alt="" /></span></div>
+							</div>
+
+							<br>
                             If you are interested to see the whole code, I have attached it below.
                             <br><br>
 
